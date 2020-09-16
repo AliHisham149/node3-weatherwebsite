@@ -7,7 +7,7 @@ request({url,json:true},(error,{body})=>{
     }else if (body.error){
         callback('Unable to find loc')
     }else{
-        callback(undefined,body.daily.data[0].summary)
+        callback(undefined,body.daily.data[0].summary+body.daily.data[1])
     }
 })
 }
